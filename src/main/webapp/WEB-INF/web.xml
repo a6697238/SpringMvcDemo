@@ -18,7 +18,7 @@
 
     <servlet>
         <servlet-name>MockCharsetServlet</servlet-name>
-        <servlet-class>com.houlu.JavaTest.SpringMVCDeamo.mock.MockCharsetServlet</servlet-class>
+        <servlet-class>com.houlu.JavaTest.SpringMvcDemo.mock.MockCharsetServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MockCharsetServlet</servlet-name>

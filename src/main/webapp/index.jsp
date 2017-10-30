@@ -10,7 +10,7 @@
 <body>
 <h2>Hello World!</h2>
 
-<form action="/SpringMVCdeamo/user/userLogin">
+<form action="/SpringMvcDemo/user/userLogin">
     用户名：<input id="username" name="username" type="text"><br>
     密  码：<input id="password" name="password" type="password"><br>
     <input type="submit">

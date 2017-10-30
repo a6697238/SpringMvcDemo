@@ -1,15 +1,13 @@
-package com.houlu.JavaTest.SpringMVCDeamo.controller;
+package com.houlu.JavaTest.SpringMvcDemo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 /**
  * 类名称: UserController <br>
@@ -33,4 +31,14 @@ public class UserController {
         modelMap.addAttribute("ip",servletRequest.getRemoteAddr());
         return "test";
     }
+
+    @RequestMapping(value = "/userUpload")
+    public String userUpload(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request, ModelMap modelMap) {
+        System.out.println("开始");
+        String path = request.getSession().getServletContext().getRealPath("upload");
+        String fileName = file.getOriginalFilename();
+        modelMap.addAttribute("ip",servletRequest.getRemoteAddr());
+        return "test";
+    }
+
 }
